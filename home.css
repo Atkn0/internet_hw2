@@ -1,0 +1,170 @@
+/* styles.css */
+
+/* Genel Ayarlar */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* Sol Kısım: Kullanıcı Girişi */
+.left-part, .center-part, .right-part {
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.left-part {
+    width: 30%;
+    border-right: 1px solid #ddd;
+    background-color: #f9f9f9;
+}
+
+.left-part h2 {
+    margin-bottom: 20px;
+}
+
+.left-part form {
+    display: flex;
+    flex-direction: column;
+}
+
+.left-part label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.left-part input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+}
+
+.left-part button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.left-part button:hover {
+    background-color: #45a049;
+}
+
+/* Orta Kısım: Koltuk Düzeni */
+.center-part {
+    width: 40%;
+    border-right: 1px solid #ddd;
+    background-color: #fff;
+}
+
+.center-part h2 {
+    margin-bottom: 20px;
+}
+
+.hidden {
+    display: none;
+}
+
+#adminInterface input {
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+#adminInterface button {
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+#adminInterface button:hover {
+    background-color: #0069d9;
+}
+
+#userInterface {
+    margin-top: 20px;
+}
+
+#seatingArrangement {
+    display: grid;
+    gap: 5px;
+}
+
+/* Sağ Kısım: Rezervasyon Detayları */
+.right-part {
+    width: 30%;
+    background-color: #f9f9f9;
+}
+
+.right-part h2 {
+    margin-bottom: 20px;
+}
+
+.right-part p {
+    margin: 10px 0;
+}
+
+.right-part button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.right-part button:hover {
+    background-color: #45a049;
+}
+
+/* Koltuklar */
+.seat {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border: 1px solid #bbb;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+.seat.selected {
+    background-color: #4CAF50;
+}
+
+.seat:hover::after {
+    content: attr(data-price);
+    position: absolute;
+    top: -25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #000;
+    color: #fff;
+    padding: 3px 5px;
+    border-radius: 3px;
+    font-size: 12px;
+}
